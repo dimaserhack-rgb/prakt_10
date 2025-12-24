@@ -1,0 +1,15 @@
+price = 0
+while True:
+    num = int(input('Введите число:'))
+    if num < 0:
+        print("Ошибка цены")
+        continue
+    elif num == 0:
+        break
+    price += num
+if price > 1000:
+    skid_price = price * 0.9
+    print(f"Сумма покупок до скидки: {price}")
+    print(f"Итоговая сумма к оплате со скидкой 10%: {skid_price}")
+else:
+    print(f"Итоговая сумма к оплате: {price}")
