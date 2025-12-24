@@ -1,0 +1,24 @@
+bal = 1000
+while True:
+    print('1. Узнать баланс')
+    print('2. Снять 100 руб')
+    print('3. Положить 100 руб')
+    print('4. Выход')
+    cho = input("Введите одну из команд: ")
+    match cho:
+        case '1':
+            print(f'Ваш баланс = {bal}')
+        case '2':
+            if bal < 100:
+                print("Недостаточно средств")
+            else:
+                bal = bal - 100
+                print("Снято 100 рублей")
+        case '3':
+            bal = bal + 100
+            print("Зачислено 100 рублей")
+        case '4':
+            print("До встречи!")
+            break
+        case _:
+            print("Неверная команда")
