@@ -1,0 +1,19 @@
+print('Введите 0 для остановки (0 не включается в расчет)')
+max_num = 0
+first_number = False
+
+while True:
+    numbers = int(input('Введите числа:'))
+    if numbers == 0:
+        break
+    if not first_number:
+        max_num = numbers
+        first_number = True
+    else:
+        if numbers > max_num:
+            max_num = numbers
+
+if first_number:
+    print(f'Максимальное число: {max_num}')
+else:
+    print("Числа не были введены.")
